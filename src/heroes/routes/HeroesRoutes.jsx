@@ -4,6 +4,7 @@ import { NavBar } from '../../ui'
 import { DcPages, MarvelPages, SearchPages, HeroPages } from '../pages'
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/UserContext';
+import { LoginPages } from '../../auth';
 
 export const HeroesRoutes = () => {
 
@@ -49,6 +50,11 @@ export const HeroesRoutes = () => {
       <Route
       path="/"
       element={<HeroesApp />}
+      />
+      
+      <Route
+      path="/*"
+      element={<LoginPages />}
       />
 </Routes>   
 </div>

@@ -6,7 +6,7 @@ Muestra heroes de los comics y puedes buscar por su nombre.
 
 pueden ver el resultado directamente en:
 
-- [opcion 1 - GITHUB PAGES](https://jomadot.github.io/react-gif/)
+- [opcion 1 - GITHUB PAGES](https://jomadot.github.io/login)
 - [opcion 2 - NETLIFY](https://hero-comics.netlify.app/)
 
 Estoy utilizando:

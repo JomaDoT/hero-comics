@@ -15,7 +15,7 @@ export const HeroCard = ({
     characters
 }) => {
 
-  const sourceImgHero = `/assets/heroes/${id}.jpg`;
+  const sourceImgHero = `./assets/heroes/${id}.jpg`;
 
   // const CharacterByHero  =(<p>{characters}</p>);
   return (

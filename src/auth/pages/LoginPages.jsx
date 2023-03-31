@@ -21,7 +21,7 @@ export const LoginPages = () => {
 
     setuser(username);
 
-    nav('/',{
+    nav('/HeroesApp',{
       replace:true
     })
   }

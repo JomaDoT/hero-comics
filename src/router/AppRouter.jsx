@@ -17,6 +17,11 @@ return (
       path="login"
       element={<LoginPages />}
       />
+
+      {/* <Route
+      path="/"
+      element={<HeroesApp />}
+      /> */}
       
       <Route
       path="/*"

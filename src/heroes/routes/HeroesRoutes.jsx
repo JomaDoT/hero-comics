@@ -1,10 +1,9 @@
 import { useNavigate, Route, Routes } from 'react-router-dom'
-import { HeroesApp } from '../../HeroesApp'
 import { NavBar } from '../../ui'
 import { DcPages, MarvelPages, SearchPages, HeroPages } from '../pages'
 import { useContext, useEffect } from 'react';
 import { UserContext } from '../../context/UserContext';
-import { LoginPages } from '../../auth';
+import { HeroesApp } from '../../HeroesApp';
 
 export const HeroesRoutes = () => {
 
@@ -46,16 +45,16 @@ export const HeroesRoutes = () => {
       path="hero/:id"
       element={<HeroPages />}
       />
-            
-      <Route
-      path="/"
-      element={<HeroesApp />}
-      />
       
       <Route
-      path="/*"
-      element={<LoginPages />}
+      path="HeroesApp"
+      element={<HeroesApp />}
       />
+
+      
+
+
+      
 </Routes>   
 </div>
     </>

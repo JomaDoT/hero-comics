@@ -20,7 +20,7 @@ export const NavBar = () => {
             
             <Link 
                 className="navbar-brand" 
-                to="/"
+                to="/HeroesApp"
             >
                 Asociaciones
             </Link>

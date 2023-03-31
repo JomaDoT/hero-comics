@@ -25,6 +25,8 @@ export const LoginPages = () => {
       replace:true
     })
   }
+
+ console.log(window.location.origin);
   
   return (
     <>

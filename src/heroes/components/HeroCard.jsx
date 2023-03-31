@@ -10,7 +10,7 @@ const CharacterByHero = ({alter_ego,characters})=>{
 }
 
 export const HeroCard = ({
-    id, superhero,publisher,
+    id, superhero,
     alter_ego,first_appearance,
     characters
 }) => {

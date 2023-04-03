@@ -19,7 +19,7 @@ export const LoginPage = () => {
        return
     }
 
-    const lastPath = localStorage.getItem('lastPath') || '/';
+    const lastPath = localStorage.getItem('lastPath') || '/marvel';
 
     login(username);
     

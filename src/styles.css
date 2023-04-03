@@ -1,22 +1,20 @@
 *, html {
-  margin:0;
-  padding:0;  
-  font-family: Helvetica, Arial, sans-serif;
-
-}
+    margin:0;
+    padding:0;  
+    font-family: Helvetica, Arial, sans-serif;
   
-h1{
-  text-align: center;
-}
-.container{
-  height: 100%;
-  width: 100%;
-  position:absolute;
-  align-content:center;
+  }
+.containerLogin {
+    height: 300px;
+    width: 300px;
+    position: relative;
+    
   }
   
-.Logincard{
-  margin:auto;
-  padding: auto;
-  
+  .Logincard {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
   }

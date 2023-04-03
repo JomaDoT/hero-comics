@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter
-} from "react-router-dom";
-import {AppRouter} from './router/AppRouter';
+import { BrowserRouter } from 'react-router-dom';
 
-import './styles.css'
-import { UserProvider } from './context/UserProvider';
+import { HeroesApp } from './HeroesApp';
+import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <UserProvider>
-        <BrowserRouter>
-        <AppRouter/>
-        </BrowserRouter>
-    </UserProvider>
+    <BrowserRouter>
+      <HeroesApp />
+    </BrowserRouter>
   </React.StrictMode>
-)
+);

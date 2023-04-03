@@ -22,6 +22,7 @@ Estoy utilizando:
 - customhooks.
 - props.
 - helpers.
+- Routes (public and private)
 - netlify.
 - github pages.
 - and others.

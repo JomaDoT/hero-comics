@@ -1,62 +1,27 @@
-import { useNavigate, Route, Routes } from 'react-router-dom'
-import { NavBar } from '../../ui'
-import { DcPages, MarvelPages, SearchPages, HeroPages } from '../pages'
-import { useContext, useEffect } from 'react';
-import { UserContext } from '../../context/UserContext';
-import { HeroesApp } from '../../HeroesApp';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navbar } from '../../ui';
+import { DcPage, HeroPage, MarvelPage, SearchPage } from '../pages';
 
 export const HeroesRoutes = () => {
-
-  const {user} = useContext(UserContext);
-
-  const navigate = useNavigate();
-  
-  useEffect(() => {
-    if(user === null)
-    {
-        navigate('/login',{
-            replace:true
-        });
-    }
-  }, [])
-  
   return (
     <>
-    <NavBar /> 
+        <Navbar />
 
-<div className='container'>
-<Routes>
-      <Route
-      path="marvel"
-      element={<MarvelPages />}
-      />
+        <div className="container">
+            <Routes>
+                <Route path="marvel" element={<MarvelPage />} />
+                <Route path="dc" element={<DcPage />} />
+                
+                <Route path="search" element={<SearchPage />} />
+                <Route path="hero/:id" element={<HeroPage />} />
+                                
 
-      <Route
-      path="dc"
-      element={<DcPages />}
-      />
-    
-      <Route
-      path="search"
-      element={<SearchPages />}
-      />
-      
-      <Route
-      path="hero/:id"
-      element={<HeroPages />}
-      />
-      
-      <Route
-      path="HeroesApp"
-      element={<HeroesApp />}
-      />
+                <Route path="/" element={<Navigate to="/marvel" />} />
 
-      
+            </Routes>
+        </div>
 
 
-      
-</Routes>   
-</div>
     </>
   )
 }

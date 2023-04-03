@@ -1,26 +1,28 @@
 import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { UserContext } from '../../context/UserContext';
+import { AuthContext } from '../../auth/context/AuthContext';
 
-export const NavBar = () => {
 
-    const {user,setuser} = useContext(UserContext);
+export const Navbar = () => {
+
+    const { user, logout } = useContext( AuthContext );
+    
 
     const navigate = useNavigate();
 
-    const onLogout = () =>{
-        setuser(null);
-
-        navigate('/login',{
+    const onLogout = () => {
+        logout();
+        navigate('/login', {
             replace: true
         });
     }
+
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
             <Link 
                 className="navbar-brand" 
-                to="/HeroesApp"
+                to="/"
             >
                 Asociaciones
             </Link>
@@ -29,39 +31,42 @@ export const NavBar = () => {
                 <div className="navbar-nav">
 
                     <NavLink 
-                        className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
+                        className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }
                         to="/marvel"
                     >
-                        MARVEL
+                        Marvel
                     </NavLink>
 
                     <NavLink 
-                        className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
+                        className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }
                         to="/dc"
                     >
                         DC
                     </NavLink>
+                    
                     <NavLink 
-                        className={({isActive}) => `nav-item nav-link ${isActive ? 'active' : ''}`}
+                        className={ ({isActive}) => `nav-item nav-link  ${ isActive ? 'active':'' }` }
                         to="/search"
                     >
-                        SEARCH
+                        Search
                     </NavLink>
                 </div>
             </div>
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
-                    <span className='nav-item nav-link text-primary'>
-                        {(user !== null) && user }
+                   
+                    <span className="nav-item nav-link text-primary">
+                        { user?.name }
                     </span>
-                    
-                    <button 
+
+                    <button
                         className="nav-item nav-link btn"
-                        onClick={onLogout}
+                        onClick={ onLogout }
                     >
                         Logout
                     </button>
+
                 </ul>
             </div>
         </nav>

@@ -1,22 +1,13 @@
-import { HeroList } from "./heroes/components"
+import { AuthProvider } from './auth';
+import { AppRouter } from './router/AppRouter';
+
 
 export const HeroesApp = () => {
   return (
-    <>
-    <h1>Heros App</h1>
-    <hr />
-    <div className="row">  
-      <div className="col-6">
-           <h1>Dc Comics</h1>
-           <HeroList publisher='DC Comics' />
-      </div>
-
-      <div className="col-6">
-           <h1>MarvelPages</h1>
-           <HeroList publisher='Marvel Comics' />
-      </div>
-  </div>   
-
-    </>
+    <AuthProvider>
+        
+        <AppRouter />
+        
+    </AuthProvider>
   )
 }
